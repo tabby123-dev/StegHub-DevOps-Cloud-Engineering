@@ -25,7 +25,7 @@ Each project folder contains detailed documentation, implementation steps, lesso
 
 ---
 
-## 📂 What You Will Find Here
+##  What You Will Find Here
 
 This repository includes:
 
