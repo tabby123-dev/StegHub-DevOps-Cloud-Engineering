@@ -124,7 +124,7 @@ Group  : rwx
 Others : rwx
 ```
 
-⚠️ Use with caution because anyone can modify the file.
+ Use with caution because anyone can modify the file.
 
 ---
 
