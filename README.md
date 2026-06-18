@@ -106,4 +106,4 @@ This repository will continue to grow as I complete additional projects and expa
 
 Feel free to explore the projects, provide feedback, or connect with me to discuss DevOps and Cloud Engineering.
 
-###  If you find this repository useful, consider giving it a star!
+
