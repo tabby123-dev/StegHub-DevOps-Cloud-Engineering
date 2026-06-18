@@ -122,7 +122,7 @@ Verify PHP installation:
 ```bash
 php -v
 ```
-![Php version](images/php version.png)
+![Php version](images/phpversion.png)
 
 ---
 
@@ -184,8 +184,8 @@ Access:
 ```text
 http://<public-ip-address>
 ```
-
-![PHP Test Page](images/php info.png)
+---
+![Application Screenshot](images/phpinfo.png)
 
 ---
 
