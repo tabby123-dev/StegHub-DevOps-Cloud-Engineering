@@ -39,7 +39,7 @@ An Ubuntu EC2 instance was launched from the AWS Management Console.
   * SSH (22)
   * HTTP (80)
 
-![EC2 Launch](images/sl.png)
+![EC2 Launch](images/sl1.png)
 
 ---
 
