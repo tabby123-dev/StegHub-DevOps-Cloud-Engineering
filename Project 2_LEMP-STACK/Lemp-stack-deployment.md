@@ -89,13 +89,13 @@ Launch an Ubuntu EC2 instance and configure the security group to allow SSH, HTT
 
 ### Screenshot
 
-```
-![sl](images/sl.png)
-```
 
-```
+![sl](images/sl.png)
+
+
+
 ![EC2 Instance](images/ec2.png)
-```
+
 
 ---
 
@@ -111,9 +111,9 @@ ssh -i aws-key.pem ubuntu@<EC2-Public-IP>
 ![SSH Login](images/images/coonect.png)
 ```
 
-```markdown
+
 ![SSH Login](images/images/coonect.png)
-```
+
 
 ---
 
@@ -144,9 +144,9 @@ sudo systemctl status nginx
 
 ### Screenshot
 
-```
+
 ![nginx](images/nginxweb.png)
-```
+
 
 ---
 
@@ -170,9 +170,9 @@ sudo systemctl status mysql
 
 ### Screenshot
 
-```
+
 ![mysql](images/msql-server.png)
-```
+
 
 ---
 
@@ -190,9 +190,9 @@ php -v
 
 ### Screenshot
 
-```
+
 ![mysql](images/phpversion.png)
-```
+
 
 ---
 
@@ -224,9 +224,8 @@ sudo systemctl restart nginx
 
 ### Screenshot
 
-```
-![mysql](images/nginxconfig.png)
-```
+
+![mysql](images/nginxconfig.png)```
 
 ---
 
@@ -248,9 +247,9 @@ sudo chmod -R 755 /var/www/projectlemp
 
 ### Screenshot
 
-```
+
 ![mysql](images/sitelive.png)
-```
+
 
 ---
 
@@ -287,9 +286,9 @@ FLUSH PRIVILEGES;
 
 ### Screenshot
 
-```
+
 ![mysql](images/dbconnection.png)
-```
+
 
 ---
 
@@ -329,9 +328,9 @@ DESCRIBE reservations;
 
 ### Screenshot
 
-```
+
 ![mysql](images/DBTABLE.png)
-```
+
 
 ---
 
@@ -347,9 +346,9 @@ Created a PHP backend (`reservation.php`) to:
 
 ### Screenshot
 
-```
+
 ![mysql](images/resevation.png)
-```
+
 
 ---
 
@@ -361,9 +360,9 @@ SELECT * FROM reservations;
 
 ### Screenshot
 
-```
+
 ![mysql](images/dataondatabase.png)
-```
+
 
 ---
 
@@ -373,9 +372,9 @@ Created an `admin.php` page to display all reservations stored in MySQL.
 
 ### Screenshot
 
-```
+
 ![mysql](images/admindash.png)
-```
+
 
 ---
 
@@ -383,27 +382,27 @@ Created an `admin.php` page to display all reservations stored in MySQL.
 
 ### Home Page
 
-```
+
 ![Home](images/sitelive.png)
-```
+
 
 ### Reservation Form
 
-```
+
 ![Reservation Form](images/booking.png)
-```
+
 
 ### Successful Reservation
 
-```
+
 ![Reservation Success](images/resevation.png)
-```
+
 
 ### Admin Dashboard
 
-```markdown
+
 ![Admin Dashboard](images/admindash.png)
-```
+
 
 ---
 
