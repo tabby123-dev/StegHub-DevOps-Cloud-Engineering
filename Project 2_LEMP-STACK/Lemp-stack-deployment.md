@@ -90,10 +90,10 @@ Launch an Ubuntu EC2 instance and configure the security group to allow SSH, HTT
 ### Screenshot
 
 ```
-images/sl.png
+![sl](images/sl.png)
 ```
 
-```markdown
+```
 ![EC2 Instance](images/ec2.png)
 ```
 
@@ -108,7 +108,7 @@ ssh -i aws-key.pem ubuntu@<EC2-Public-IP>
 ### Screenshot
 
 ```
-images/coonect.png
+![SSH Login](images/images/coonect.png)
 ```
 
 ```markdown
@@ -145,7 +145,7 @@ sudo systemctl status nginx
 ### Screenshot
 
 ```
-images/nginxweb.png
+![nginx](images/nginxweb.png)
 ```
 
 ---
@@ -171,7 +171,7 @@ sudo systemctl status mysql
 ### Screenshot
 
 ```
-images/msql-server.png
+![mysql](images/msql-server.png)
 ```
 
 ---
@@ -191,7 +191,7 @@ php -v
 ### Screenshot
 
 ```
-images/phpversion.png
+![mysql](images/phpversion.png)
 ```
 
 ---
@@ -225,7 +225,7 @@ sudo systemctl restart nginx
 ### Screenshot
 
 ```
-images/nginxconfig.png
+![mysql](images/nginxconfig.png)
 ```
 
 ---
@@ -249,7 +249,7 @@ sudo chmod -R 755 /var/www/projectlemp
 ### Screenshot
 
 ```
-images/sitelive.png
+![mysql](images/sitelive.png)
 ```
 
 ---
@@ -288,7 +288,7 @@ FLUSH PRIVILEGES;
 ### Screenshot
 
 ```
-images/dbconnection.png
+![mysql](images/dbconnection.png)
 ```
 
 ---
@@ -330,7 +330,7 @@ DESCRIBE reservations;
 ### Screenshot
 
 ```
-images/DBTABLE.png
+![mysql](images/DBTABLE.png)
 ```
 
 ---
@@ -348,7 +348,7 @@ Created a PHP backend (`reservation.php`) to:
 ### Screenshot
 
 ```
-images/resevation.png
+![mysql](images/resevation.png)
 ```
 
 ---
@@ -362,7 +362,7 @@ SELECT * FROM reservations;
 ### Screenshot
 
 ```
-images/dataondatabase.png
+![mysql](images/dataondatabase.png)
 ```
 
 ---
@@ -374,7 +374,7 @@ Created an `admin.php` page to display all reservations stored in MySQL.
 ### Screenshot
 
 ```
-images/admindash.png
+![mysql](images/admindash.png)
 ```
 
 ---
@@ -383,19 +383,19 @@ images/admindash.png
 
 ### Home Page
 
-```markdown
+```
 ![Home](images/sitelive.png)
 ```
 
 ### Reservation Form
 
-```markdown
+```
 ![Reservation Form](images/booking.png)
 ```
 
 ### Successful Reservation
 
-```markdown
+```
 ![Reservation Success](images/resevation.png)
 ```
 
@@ -478,15 +478,3 @@ DESCRIBE reservations;
 * Deploying a full-stack web application
 
 ---
-
-# Future Improvements
-
-* User authentication for the admin dashboard
-* Reservation confirmation emails
-* HTTPS using Let's Encrypt
-* Domain name configuration
-* Reservation status management
-* Search and filter reservations
-* Responsive admin dashboard
-* Docker containerization
-* CI/CD deployment pipeline
