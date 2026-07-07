@@ -75,15 +75,14 @@ Before starting, ensure you have:
 # Project Structure
 
 ```
-mern-app/
+todo-app/
 │
-├── backend/
-│   ├── config/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── server.js
+├── client/
+│   ├── node_modules/
+│   ├── modules/
+│   ├── public/
+│   ├── src/
+│   ├── package-lock.json.js
 │   ├── package.json
 │   └── .env
 │
