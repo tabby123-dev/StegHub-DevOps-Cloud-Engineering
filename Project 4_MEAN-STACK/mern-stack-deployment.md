@@ -4,19 +4,19 @@ This guide walks through deploying a MEAN (MongoDB, Express, Angular, Node.js) s
 
 ## Table of Contents
 
-- [1. Launch an EC2 Instance](#1-launch-an-ec2-instance)
-- [2. Connect to the Server](#2-connect-to-the-server)
-- [3. Update the Server](#3-update-the-server)
-- [4. Add SSL Certificates](#4-add-ssl-certificates)
-- [5. Install Node.js](#5-install-nodejs)
-- [6. Install MongoDB](#6-install-mongodb)
-- [7. Set Up the Project](#7-set-up-the-project)
-- [8. Build the Express Server](#8-build-the-express-server)
-- [9. Create Routes](#9-create-routes)
-- [10. Create the Model](#10-create-the-model)
-- [11. Build the AngularJS Frontend](#11-build-the-angularjs-frontend)
-- [12. Run and Test the Application](#12-run-and-test-the-application)
-- [13. Open the Port and Access the App](#13-open-the-port-and-access-the-app)
+ [1. Launch an EC2 Instance](#1-launch-an-ec2-instance)
+ [2. Connect to the Server](#2-connect-to-the-server)
+ [3. Update the Server](#3-update-the-server)
+ [4. Add SSL Certificates](#4-add-ssl-certificates)
+ [5. Install Node.js](#5-install-nodejs)
+ [6. Install MongoDB](#6-install-mongodb)
+ [7. Set Up the Project](#7-set-up-the-project)
+ [8. Build the Express Server](#8-build-the-express-server)
+ [9. Create Routes](#9-create-routes)
+ [10. Create the Model](#10-create-the-model)
+ [11. Build the AngularJS Frontend](#11-build-the-angularjs-frontend)
+ [12. Run and Test the Application](#12-run-and-test-the-application)
+ [13. Open the Port and Access the App](#13-open-the-port-and-access-the-app)
 
 ---
 
@@ -30,9 +30,9 @@ Launch an EC2 instance from the AWS Management Console.
 
 SSH into the server as the `ubuntu` user.
 
-\`\`\`bash
+```bash
 ssh -i "your-key.pem" ubuntu@<your-ec2-public-ip>
-\`\`\`
+```
 
 ![SSH into the server](images/connect.png)
 
@@ -40,9 +40,9 @@ ssh -i "your-key.pem" ubuntu@<your-ec2-public-ip>
 
 Update and upgrade the server packages.
 
-\`\`\`bash
+```bash
 sudo apt update && sudo apt upgrade -y
-\`\`\`
+```
 
 ![Update and upgrade server](images/update.png)
 
@@ -64,47 +64,47 @@ Install Node.js on the server.
 
 ### Install curl and gnupg
 
-\`\`\`bash
+```bash
 sudo apt install -y curl gnupg
-\`\`\`
+```
 
 ![Install curl and gnupg](images/curl.png)
 
 ### Download the MongoDB GPG Key
 
-\`\`\`bash
+```bash
 curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
   sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg --dearmor
-\`\`\`
+```
 
 ![Download MongoDB GPG key](images/gpg2.png)
 ![Download MongoDB GPG key](images/mongogpgkey.png)
 
 ### Install MongoDB
 
-\`\`\`bash
+```bash
 sudo apt update
 sudo apt install -y mongodb-org
 sudo systemctl start mongod
 sudo systemctl enable mongod
-\`\`\`
+```
 
 ![Install MongoDB - step 1](images/mongoinstall.png)
 ![Install MongoDB - step 2](images/mongorun.png)
 
 ###  Install npm
 
-\`\`\`bash
+```bash
 sudo apt install -y npm
-\`\`\`
+```
 
 ![Install npm](images/npmversion.png)
 
 ###  Install the Body-Parser Package
 
-\`\`\`bash
+```bash
 npm install body-parser
-\`\`\`
+```
 
 ![Install body-parser](images/bodyparser.png)
 
@@ -112,27 +112,27 @@ npm install body-parser
 
 Create a directory called `Books` and move into it.
 
-\`\`\`bash
+```bash
 mkdir Books && cd Books
-\`\`\`
+```
 Initialize a new npm project.
 
-\`\`\`bash
+```bash
 npm init -y
-\`\`\`
+```
 ![dir books npm initialize](images/npminit.png)
 
 ## 8. Build the Express Server
 
 Inside the `Books` directory, create a file called `server.js`.
 
-\`\`\`bash
+```bash
 touch server.js
-\`\`\`
+```
 
 ![Create server.js](images/serverjs.png)
 
-\`\`\`js
+```js
 // server.js
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -157,13 +157,13 @@ app.listen(PORT, () => {
   console.log(`Server up: http://localhost:${PORT}`);
 });
 
-\`\`\`
+```
 
 ## Install Express and set up the base server routes.
 
-\`\`\`bash
+```bash
 npm install express
-\`\`\`
+```
 
 ![Install Express](images/installexpress.png)
 
@@ -171,21 +171,21 @@ npm install express
 
 Create an `apps` directory and move into it.
 
-\`\`\`bash
+```bash
 mkdir apps && cd apps
-\`\`\`
+```
 
 ![Create apps directory](images/appdir.png)
 
 Inside `apps`, create a file called `routes.js`.
 
-\`\`\`bash
+```bash
 touch routes.js
-\`\`\`
+```
 
 ![Create routes.js](images/routesjs.png)
 
-\`\`\`js
+```js
 // apps/routes.js
 const Book = require('./models/book');
 const path = require('path');
@@ -257,27 +257,27 @@ module.exports = function (app) {
     });
 
 
-\`\`\`
+```
 
 ## 10. Create the Model folder
 
 Inside the `apps` folder, create a folder called `models` and move into it.
 
-\`\`\`bash
+```bash
 mkdir models && cd models
-\`\`\`
+```
 
 ![Create models directory](images/dirmodels.png)
 
 Inside the `models` folder, create a file called `book.js`.
 
-\`\`\`bash
+```bash
 touch book.js
-\`\`\`
+```
 
 ![Create book.js](images/bookjs.png)
 
-\`\`\`js
+```js
 // apps/models/book.js
 const mongoose = require('mongoose');
 
@@ -309,28 +309,28 @@ const bookSchema = new mongoose.Schema(
 );
 
 module.exports = mongoose.model('Book', bookSchema);
-\`\`\`
+```
 
 ## 11. Build the AngularJS Frontend
 
 Navigate back to the `Books` folder, create a folder called `public`, and move into it.
 
-\`\`\`bash
+```bash
 cd ../.. Books
 mkdir public && cd public
-\`\`\`
+```
 
 ![Create public directory](images/publicdir.png)
 
 Inside the `public` folder, create a file called `script.js`.
 
-\`\`\`bash
+```bash
 touch script.js
-\`\`\`
+```
 
 ![Create script.js](images/scriptjs.png)
 
-\`\`\`js
+```js
 // public/script.js
 angular.module('bookApp', [])
 .controller('BookController', ['$scope', '$http', function ($scope, $http) {
@@ -381,17 +381,17 @@ angular.module('bookApp', [])
 
 }]);
 
-\`\`\`
+```
 
 ## Create another file in the `public` folder called `index.html`.
 
-\`\`\`bash
+```bash
 touch index.html
-\`\`\`
+```
 
 ![Create index.html](images/index.html.png)
 
-\`\`\`html
+```html
 <!-- public/index.html -->
 <!DOCTYPE html>
 <html lang="en" ng-app="bookApp">
@@ -441,24 +441,24 @@ touch index.html
     </style>
 </head>
 
-\`\`\`
+```
 
 ## 12. Run and Test the Application
 
 Go back to the `Books` folder and run the server.
 
-\`\`\`bash
+```bash
 cd ../Books
 node server.js
-\`\`\`
+```
 
 ![Run server.js](images/runserverjs.png)
 
 Open a local terminal and test with `curl`.
 
-\`\`\`bash
+```bash
 curl http://localhost:3300
-\`\`\`
+```
 
 ![Test with curl](images/curlcommand.png)
 
