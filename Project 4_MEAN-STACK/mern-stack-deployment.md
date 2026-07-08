@@ -475,7 +475,27 @@ Navigate to the public DNS of the instance in your browser. You should see the r
 ![Application view - step 3](images/deletebook.png)
 
 ---
+## Lessons Learned
 
-## Notes
+### Key Skills Acquired
 
+By completing this project, I gained experience in:
+
+- Full-stack web application development
+- REST API development
+- MongoDB database design
+- Express.js backend development
+- AngularJS frontend development
+- Node.js server management
+- Linux system administration
+- AWS EC2 deployment
+- Git and GitHub workflows
+- Application debugging and troubleshooting
+- Technical documentation using Markdown
+
+---
+
+## Conclusion
+
+This project strengthened my understanding of the complete MEAN Stack development lifecycle, from environment setup and backend development to frontend integration, database management, deployment on AWS, and application troubleshooting. It also reinforced best practices for writing maintainable code, debugging effectively, and documenting software projects.
 
