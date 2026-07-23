@@ -345,7 +345,7 @@ Allow:
 sudo yum install nfs-utils nfs4-acl-tools -y
 ```
 
-![sg](images/nfsclient.png)
+![sg](images/nfsinstall.png)
 
 ---
 
@@ -483,9 +483,9 @@ Update the database configuration.
 
 ```php
 $db = mysqli_connect(
-    "172.31.40.137",
-    "webaccess",
-    "Password123",
+    "172.31.40.000",
+    "webess",
+    "Pas",
     "tooling"
 );
 ```
@@ -518,7 +518,7 @@ INSERT INTO users
 VALUES
 (
 'admin',
-MD5('Admin@123'),
+MD5('Admin@12356788'),
 'admin@example.com',
 'admin',
 '1'
@@ -588,41 +588,7 @@ SELINUX=disabled
 
 Reboot the server afterward.
 
----
 
-## Verify Apache
-
-```bash
-sudo systemctl status httpd
-```
-
----
-
-## Verify PHP-FPM
-
-```bash
-sudo systemctl status php-fpm
-```
-
----
-
-## Verify NFS
-
-```bash
-df -h
-
-mount | grep nfs
-```
-
----
-
-## Verify Database Connectivity
-
-```bash
-mysql -h <database-private-ip> -u webaccess -p
-```
-
----
 
 # Expected Result
 
