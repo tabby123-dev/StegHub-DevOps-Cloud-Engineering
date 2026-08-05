@@ -486,6 +486,8 @@ sudo tail -f /var/log/httpd/access_log
 ```
 
 ![Verify load balancing](images/logs.png)
+![Verify load balancing count](images/lbcount1.png)
+![Verify load balancing count](images/lbcount2.png)
 
 
 ------------------------------------------------------------------------
@@ -547,3 +549,20 @@ These names are not automatically:
 -   Internet DNS names
 -   VPC-wide DNS records
 -   Globally resolvable hostnames
+
+**Key Takeaway**
+
+The major infrastructure concept from this module is learning how to distribute application traffic across multiple servers using Apache as a Layer 7 reverse proxy/load balancer, and how to validate that traffic distribution through configuration testing, traffic generation, and server logs.
+# Technologies Used
+
+- AWS EC2
+- Amazon EBS
+- Red Hat Enterprise Linux 8
+- Ubuntu Server 24.04
+- NFS
+- Apache HTTP Server
+- PHP
+- MySQL
+- Git
+- GitHub
+- Linux LVM (Physical Volumes, Volume Groups, Logical Volumes)
