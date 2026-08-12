@@ -147,7 +147,7 @@ All Tests Pass?
 
 Think about ordering food:
 
-**CI:**
+**Continious Integration:**
 
 > "I prepared the food and checked that it is good."
 
